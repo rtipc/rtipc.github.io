@@ -57,7 +57,7 @@ To maintain a single source of truth across languages without runtime overhead, 
 
 ## How It Works (Usage Workflow)
 
-![alt text](https://github.com/mausys/rtipc-rust/blob/main/doc/flow.png)
+![alt text](https://github.com/rtipc/rtipc-rust/blob/main/doc/flow.png)
 
 1. **Define Channels:** The client configures a channel vector detailing the queue length, message size, optional `eventfd`, and custom user metadata.
 2. **Allocate Resources:** The library creates anonymous shared memory, initializes `eventfd` instances, and maps the queues.
@@ -77,8 +77,8 @@ RTIPC is under active development. The ecosystem is designed to be lightweight, 
 
 | Language / Binding | Status | Repository |
 | --- | --- | --- |
-| **C11** | Active Development (Dependency Free) | [rtipc](https://github.com/mausys/rtipc.git) |
-| **Rust** | Active Development (Pure Rust) | [rtipc-rust](https://github.com/mausys/rtipc-rust.git) |
-| **Python** | Work In Progress (via Cython) | [pyrtipc](https://github.com/mausys/pyrtipc.git) |
+| **C11** | Active Development (Dependency Free) | [rtipc](https://github.com/rtipc/rtipc.git) |
+| **Rust** | Active Development (Pure Rust) | [rtipc-rust](https://github.com/rtipc/rtipc-rust.git) |
+| **Python** | Work In Progress (via Cython) | [pyrtipc](https://github.com/rtipc/pyrtipc.git) |
 | **C++** | Planned (C Header compatible, RAII wrappers) | *Coming Soon* |
 | **Java / C# / Go** | Planned | *Coming Soon* |
