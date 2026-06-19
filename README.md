@@ -57,7 +57,7 @@ To maintain a single source of truth across languages without runtime overhead, 
 
 ## How It Works (Usage Workflow)
 
-![alt text](https://github.com/rtipc/rtipc-rust/blob/main/doc/flow.png)
+![alt text](flow.png)
 
 1. **Define Channels:** The client configures a channel vector detailing the queue length, message size, optional `eventfd`, and custom user metadata.
 2. **Allocate Resources:** The library creates anonymous shared memory, initializes `eventfd` instances, and maps the queues.
