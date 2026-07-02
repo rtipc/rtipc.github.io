@@ -59,10 +59,10 @@ To maintain a single source of truth across languages without runtime overhead, 
 
 ![alt text](flow.png)
 
-1. **Define Channels:** The client configures a channel vector detailing the queue length, message size, optional `eventfd`, and custom user metadata.
-2. **Allocate Resources:** The library creates anonymous shared memory, initializes `eventfd` instances, and maps the queues.
-3. **Bootstrap via Unix Sockets:** The configuration vector is serialized. The file descriptors (shared memory + `eventfd`s) are sent to the target process via a standard Unix domain socket using native file descriptor passing (`SCM_RIGHTS`).
-4. **Establish SPSC Loop:** The receiving process deserializes the request, maps the memory, and both processes begin communicating directly via shared memory, bypassing the kernel entirely.
+1. **Define Channels:** The client configures a channel vector detailing the queue lengths, message sizes, optional `eventfd`s, and custom user metadata.
+2. **Allocate Resources:** The library creates anonymous shared memory and `eventfd`s, then initializes the message queues.
+3. **Bootstrap via Unix Sockets:** The configuration vector is serialized. The file descriptors (shared memory + `eventfd`s) are sent to the server via a standard Unix domain socket using native file descriptor passing (`SCM_RIGHTS`).
+4. **Establish SPSC Loop:** The server deserializes the request, maps the memory, and both processes begin communicating directly via shared memory, bypassing the kernel entirely.
 
 ### Alternative Bootstrap Methods
 
