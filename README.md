@@ -79,6 +79,6 @@ RTIPC is under active development. The ecosystem is designed to be lightweight, 
 | --- | --- | --- |
 | **C11** | Active Development (Dependency Free) | [rtipc](https://github.com/rtipc/rtipc.git) |
 | **Rust** | Active Development (Pure Rust) | [rtipc-rust](https://github.com/rtipc/rtipc-rust.git) |
-| **Python** | Work In Progress (via Cython) | [pyrtipc](https://github.com/rtipc/pyrtipc.git) |
+| **Python** | Active Development (via Cython) | [pyrtipc](https://github.com/rtipc/pyrtipc.git) |
 | **C++** | Planned (C Header compatible, RAII wrappers) | *Coming Soon* |
 | **Java / C# / Go** | Planned | *Coming Soon* |
